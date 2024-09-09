@@ -1,89 +1,149 @@
-# libft
+<p align="center">
+  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/piscine_and_common_core/github_piscine_and_common_core_banner_libft.png">
+</p>
 
-ft_atoi.c: Bir stringi (karakter dizisini) tam sayıya dönüştürür.
+<p align="center">
+	<img src="https://img.shields.io/badge/status-finished-success?color=%2312bab9&style=flat-square"/>
+	<img src="https://img.shields.io/badge/evaluated-24%20%2F%2011%20%2F%202022-success?color=%2312bab9&style=flat-square"/>
+	<img src="https://img.shields.io/badge/score-125%20%2F%20100-success?color=%2312bab9&style=flat-square"/>
+	<img src="https://img.shields.io/github/languages/top/jotavare/libft?color=%2312bab9&style=flat-square"/>
+	<img src="https://img.shields.io/github/last-commit/jotavare/libft?color=%2312bab9&style=flat-square"/>
+	<a href='https://www.linkedin.com/in/omrfrkzu/' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=0A66C2&color=0A66C2'/></a>
+	<a href='https://profile.intra.42.fr/users/omkuzu' target="_blank"><img alt='42' src='https://img.shields.io/badge/Porto-100000?style=flat-square&logo=42&logoColor=white&labelColor=000000&color=000000'/></a>
+</p>
 
-ft_bzero.c: Bir bellek bölgesini sıfırlar (bütün byte'ları 0 yapar).
+<p align="center">
+	<a href="#about">About</a> •
+	<a href="#how-to-use">How to use</a> •
+	<a href="#mandatory">Mandatory</a> •
+	<a href="#bonus">Bonus</a> •
+	<a href="#norminette">Norminette</a> •
+	<a href="#contributing">Contributing</a> •
+	<a href="#license">License</a>
+</p>
 
-ft_isalnum.c: Bir karakterin alfasayısal (hem harf hem de rakam) olup olmadığını kontrol eder.
+## ABOUT
+The first project at 42, libft, involves learning how the standard functions of C programming work by writing them from scratch and creating a personal library. This project is vital as the library will be used in future assignments at 42.
 
-ft_isalpha.c: Bir karakterin alfabetik (harf) olup olmadığını kontrol eder.
+If you're a 42 student, it's highly recommended that you go through the process of writing your code and testing it yourself rather than copying and pasting code that you only partially understand. If you've completed your piscine, there's no reason why you couldn't tackle this project on your own! Be patient and thorough.
 
-ft_isascii.c: Bir karakterin ASCII karakter setinde olup olmadığını kontrol eder.
+- [Subject](https://github.com/jotavare/libft/blob/master/subject/en_subject_libft.pdf) `PDF`
+- [References](https://github.com/omrfrkzu/42-resources) `GitHub`
 
-ft_isdigit.c: Bir karakterin rakam olup olmadığını kontrol eder.
+## HOW TO USE
+#### 1º - Clone the repository
+```bash
+git clone git@github.com:jotavare/libft.git
+```
 
-ft_isprint.c: Bir karakterin ekranda yazdırılabilir olup olmadığını kontrol eder.
+#### 2º - Enter the project folder and run `make`
+```bash
+cd libft/libft
+make
+```
 
-ft_memchr.c: Bir bellek bölgesinde belirli bir karakteri arar ve bulunduğu ilk adresi döndürür.
+#### 3º - To use in your code, include the header
+```c
+#include "libft.h"
+```
 
-ft_memcmp.c: İki bellek bölgesini karşılaştırır ve farklılıkları döndürür.
+#### MAKEFILE RULES
 
-ft_striteri.c: Bir string üzerinde her karakteri işlemek için verilen fonksiyonu uygular.
+`make` - Compile libft **mandatory** files.
 
-ft_memcpy.c: Bir bellek bölgesinden başka bir bellek bölgesine veri kopyalar.
+`make bonus` - Compile libft **bonus** files.
 
-ft_memmove.c: Bir bellek bölgesinden başka bir bellek bölgesine veri taşır, kaynak ve hedef bellek bölgeleri örtüşse bile güvenli bir şekilde çalışır.
+`make all` - Compile **mandatory** + **bonus** files.
 
-ft_memset.c: Bir bellek bölgesini belirli bir byte değeri ile doldurur.
+`make clean` - Delete all .o (object files) files.
 
-ft_putendl_fd.c: Bir stringi belirli bir dosya tanımlayıcısına (genellikle standart çıktı) yazar ve ardından yeni bir satır karakteri ekler.
+`make fclean` - Delete all .o (object file) and .a (executable) files.
 
-ft_putchar_fd.c: Bir karakteri belirli bir dosya tanımlayıcısına yazar.
+`make re` - Use rules `fclean` + `all`.
 
-ft_putstr_fd.c: Bir stringi belirli bir dosya tanımlayıcısına yazar.
+## MANDATORY
+> The mandatory functions in libft include both functions from the standard C library and other functions that are useful for character, string, and memory manipulation. These **34 mandatory functions** are essential to achieving a **grade of 100**.
 
-ft_putnbr_fd.c: Bir tam sayıyı belirli bir dosya tanımlayıcısına yazar.
+#### Check and manipulate characters:
+| Function | Description |
+| :- | :- |
+| `ft_isalpha` | Alphabetic character test. |
+| `ft_isdigit` | Decimal-digit character test. |
+| `ft_isalnum` | Alphanumeric character test. |
+| `ft_isascii` | Test for ASCII character. |
+| `ft_toupper` | Lower case to upper case letter conversion. |
+| `ft_tolower` | Upper case to lower case letter conversion. |
 
-ft_strchr.c: Bir string içinde belirli bir karakteri arar ve ilk bulduğu yerin adresini döndürür.
+#### Manipulate strings:
+| Function | Description |
+| :- | :- |
+| `ft_strlen`   | Find the length of the string. |
+| `ft_strlcpy`  | Size-bounded string copying. |
+| `ft_strlcat`  | Size-bounded string concatenation. |
+| `ft_strchr`   | Locate the character in the string (first occurrence). |
+| `ft_strrchr`  | Locate the character in the string (last occurrence). |
+| `ft_strncmp`  | Compare strings (size-bounded). |
+| `ft_strnstr`  | Locate a substring in a string (size-bounded) |
+| `ft_substr`   | Extract substring from a string. |
+| `ft_strjoin`  | Concatenate two strings into a new string (with malloc). |
+| `ft_strtrim`  | Trim the beginning and end of the string with the specified characters. |
+| `ft_split`    | Split string, with specified character as delimiter, into an array of strings. |
+| `ft_strmapi`  | Create a new string by modifying the string with a specified function. |
+| `ft_striteri` | Iterates through a string, enabling character and index manipulation. |
 
-ft_strlcpy.c: Bir stringin belirli bir uzunlukta bir kopyasını alır ve hedef stringe kopyalar.
+#### Manipulate memory:
+| Function | Description |
+| :- | :- |
+| `ft_calloc`  | Memory allocation. |
+| `ft_memset`  | Write a byte to a byte string. |
+| `ft_bzero`   | Write zeroes to a byte string. |
+| `ft_memcpy`  | Copy memory area. |
+| `ft_memmove` | Copy byte string. |
+| `ft_memchr`  | Locate byte in byte string. |
+| `ft_memcmp`  | Compare byte string. |
+| `ft_strdup`  | Save a copy of a string (with malloc). |
 
-ft_strmapi.c: Bir stringin her karakteri üzerinde belirli bir işlevi uygular ve sonuçları döndürür.
+#### Manipulate numbers:
+| Function | Description |
+| :- | :- |
+| `ft_atoi` | Convert the ASCII string to an integer. |
+| `ft_itoa` | Convert integer to ASCII string. |
 
-ft_strdup.c: Bir stringin dinamik olarak ayrılmış bir kopyasını oluşturur.
+#### Write to a file descriptor:
+| Function | Description |
+| :- | :- |
+| `ft_putchar_fd` | Output a character to the given file. |
+| `ft_putstr_fd`  | Output string to the given file. |
+| `ft_putendl_fd` | Output string to given file with newline. |
+| `ft_putnbr_fd`  | Output integer to the given file. |
 
-ft_split.c: Bir stringi belirli bir ayrıcı karaktere göre böler ve alt stringlerden oluşan bir dizi döndürür.
+## BONUS
+> The bonus functions in libft are focused on list manipulation and are worth an additional 25 towards the final grade. To achieve a **grade of 125**, **all 9 bonus functions and 34 mandatory functions** must be completed accurately.
 
-ft_calloc.c: Belirli bir boyutta bellek alanı ayırır ve bu alanı sıfırlar.
+| Function | Description |
+| :- | :- |
+| `ft_lstnew`       | Create new list. |
+| `ft_lstadd_front` | Add a new element at the beginning of the list. |
+| `ft_lstadd_back`  | Add a new element at the end of the list. |
+| `ft_lstsize`      | Count elements of a list. |
+| `ft_lstlast`      | Find the last element of the list. |
+| `ft_lstdelone`    | Delete element from the list. |
+| `ft_lstclear`     | Delete the sequence of elements of the list from a starting point. |
+| `ft_lstiter`      | Apply function to the content of all list elements. |
+| `ft_lstmap`       | Apply function to the content of all list elements into a new list. |
 
-ft_itoa.c: Bir tam sayıyı stringe dönüştürür.
+## NORMINETTE
+> At 42 School, it is expected that almost every project is written following the Norm, which is the coding standard of the school.
 
-ft_strlen.c: Bir stringin uzunluğunu döndürür (sonundaki null karakter hariç).
 
-ft_strncmp.c: İki stringi belirli bir uzunlukta karşılaştırır ve farklılıkları döndürür.
+* [42 Norms](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf) - Information about 42 code norms. `PDF`
+* [Norminette](https://github.com/42School/norminette) - Tool to respect the code norm, made by 42. `GitHub`
+* [42 Header](https://github.com/42Paris/42header) - 42 header for Vim. `GitHub`
 
-ft_substr.c: Bir stringin belirli bir alt dizisini çıkarır ve yeni bir string olarak döndürür.
+## CONTRIBUTING
 
-ft_strtrim.c: Bir stringin başındaki ve sonundaki belirli karakterleri temizler ve kalan kısmı döndürür.
+If you find any issues or have suggestions for improvements, feel free to fork the repository and open an issue or submit a pull request.
 
-ft_strnstr.c: Bir string içinde belirli bir alt stringi arar ve ilk bulduğu yerin adresini döndürür.
+## LICENSE
 
-ft_strrchr.c: Bir string içinde belirli bir karakteri arar ve son bulduğu yerin adresini döndürür.
-
-ft_strjoin.c: İki stringi birleştirir ve yeni bir string döndürür.
-
-ft_tolower.c: Bir karakteri küçük harfe dönüştürür.
-
-ft_toupper.c: Bir karakteri büyük harfe dönüştürür.
-
-ft_strlcat.c: Bir stringi diğerine ekler ve toplam uzunluğu döndürür, hedef stringin uzunluğunu korur.
-
-Bonus
-
-ft_lstadd_back.c: Bir bağlı listeye (linked list) yeni bir elemanı listenin sonuna ekler.
-
-ft_lstadd_front.c: Bir bağlı listeye yeni bir elemanı listenin başına ekler.
-
-ft_lstclear.c: Bir bağlı listenin tüm elemanlarını siler ve belleği temizler.
-
-ft_lstdelone.c: Bir bağlı listede belirli bir elemanı siler ve bellek alanını serbest bırakır.
-
-ft_lstiter.c: Bir bağlı listenin her elemanı üzerinde verilen bir işlevi uygular.
-
-ft_lstlast.c: Bir bağlı listenin son elemanının adresini döndürür.
-
-ft_lstmap.c: Bir bağlı listenin her elemanı üzerinde verilen bir işlevi uygular ve yeni bir liste oluşturur.
-
-ft_lstnew.c: Yeni bir bağlı liste elemanı oluşturur ve verilen içeriği bu elemanın içeriği olarak ayarlar.
-
-ft_lstsize.c: Bir bağlı listenin eleman sayısını döndürür.
+This project is available under the MIT License. For further details, please refer to the [LICENSE](https://github.com/omrfrkzu/libft/LICENSE) file.
