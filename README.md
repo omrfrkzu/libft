@@ -1,147 +1,143 @@
 <p align="center">
-  <img src="https://github.com/jotavare/jotavare/blob/main/42/banners/piscine_and_common_core/github_piscine_and_common_core_banner_libft.png">
+  <img src="https://github.com/omrfrkzu/omrfrkzu/blob/6a582a20ae457bbd03395ae55c6938d79e81c1c9/Banners/LIBFT%20YOUR%20OWN%20LIBRARY.png">
 </p>
 
 <p align="center">
-	<img src="https://img.shields.io/badge/status-finished-success?color=%2312bab9&style=flat-square"/>
-	<img src="https://img.shields.io/badge/score-125%20%2F%20100-success?color=%2312bab9&style=flat-square"/>
-	<img src="https://img.shields.io/github/languages/top/jotavare/libft?color=%2312bab9&style=flat-square"/>
-	<img src="https://img.shields.io/github/last-commit/jotavare/libft?color=%2312bab9&style=flat-square"/>
 	<a href='https://www.linkedin.com/in/omrfrkzu/' target="_blank"><img alt='Linkedin' src='https://img.shields.io/badge/LinkedIn-100000?style=flat-square&logo=Linkedin&logoColor=white&labelColor=0A66C2&color=0A66C2'/></a>
 	<a href='https://profile.intra.42.fr/users/omkuzu' target="_blank"><img alt='42' src='https://img.shields.io/badge/42-Kocaeli-Kocaeli'/></a>
 </p>
 
 <p align="center">
-	<a href="#about">About</a> •
-	<a href="#how-to-use">How to use</a> •
-	<a href="#mandatory">Mandatory</a> •
+	<a href="#hakkinda">Hakkında</a> •
+	<a href="#nasil-kullanilir">Nasıl Kullanılır</a> •
+	<a href="#mandatory">Zorunlu</a> •
 	<a href="#bonus">Bonus</a> •
 	<a href="#norminette">Norminette</a> •
-	<a href="#contributing">Contributing</a> •
-	<a href="#license">License</a>
+	<a href="#contributing">Katkıda Bulunma</a> •
+	<a href="#license">Lisans</a>
 </p>
 
-## ABOUT
-The first project at 42, libft, involves learning how the standard functions of C programming work by writing them from scratch and creating a personal library. This project is vital as the library will be used in future assignments at 42.
+## HAKKINDA
+42'deki ilk proje olan libft, C programlamadaki standart fonksiyonların nasıl çalıştığını anlamak amacıyla bu fonksiyonları sıfırdan yazarak kişisel bir kütüphane oluşturmayı içerir. Bu proje çok önemlidir çünkü bu kütüphane, 42'deki ilerideki ödevlerde kullanılacaktır.
 
-If you're a 42 student, it's highly recommended that you go through the process of writing your code and testing it yourself rather than copying and pasting code that you only partially understand. If you've completed your piscine, there's no reason why you couldn't tackle this project on your own! Be patient and thorough.
+Eğer bir 42 öğrencisiyseniz, kodlarınızı kendiniz yazmanız ve test etmeniz şiddetle tavsiye edilir. Sadece kısmen anladığınız kodları kopyalamak yerine, sürece dahil olmak çok daha faydalı olacaktır. Piscine’i tamamladıysanız, bu projeyi kendi başınıza halledebilmeniz için bir neden yok! Sabırlı ve dikkatli olun.
 
-- [Subject](https://github.com/omrfrkzu/libft/blob/fd22498bcc14c8f347246578bd0e3706af2f80fa/subjects/en_subject_libft%20(1).pdf) `PDF`
+- [Konu](https://github.com/omrfrkzu/libft/blob/fd22498bcc14c8f347246578bd0e3706af2f80fa/subjects/en_subject_libft%20(1).pdf) `PDF`
 
-## HOW TO USE
-#### 1º - Clone the repository
+## NASIL KULLANILIR
+#### 1º - Depoyu klonlayın
 ```bash
 git clone git@github.com:jotavare/libft.git
 ```
 
-#### 2º - Enter the project folder and run `make`
+#### 2º - Proje klasörüne girin ve `make` komutunu çalıştırın
 ```bash
 cd libft/libft
 make
 ```
 
-#### 3º - To use in your code, include the header
+#### 3º - Kodunuzda kullanmak için başlığı ekleyin
 ```c
 #include "libft.h"
 ```
 
-#### MAKEFILE RULES
+#### MAKEFILE KURALLARI
 
-`make` - Compile libft **mandatory** files.
+`make` - Libft **zorunlu** dosyalarını derler.
 
-`make bonus` - Compile libft **bonus** files.
+`make bonus` - Libft **bonus** dosyalarını derler.
 
-`make all` - Compile **mandatory** + **bonus** files.
+`make all` - **Zorunlu** + **bonus** dosyalarını derler.
 
-`make clean` - Delete all .o (object files) files.
+`make clean` - Tüm .o (nesne dosyaları) dosyalarını siler.
 
-`make fclean` - Delete all .o (object file) and .a (executable) files.
+`make fclean` - Tüm .o (nesne dosyaları) ve .a (çalıştırılabilir) dosyalarını siler.
 
-`make re` - Use rules `fclean` + `all`.
+`make re` - `fclean` + `all` kurallarını kullanır.
 
-## MANDATORY
-> The mandatory functions in libft include both functions from the standard C library and other functions that are useful for character, string, and memory manipulation. These **34 mandatory functions** are essential to achieving a **grade of 100**.
+## ZORUNLU
+> Libft'teki zorunlu fonksiyonlar, hem standart C kütüphanesindeki fonksiyonları hem de karakter, string ve bellek manipülasyonu için yararlı diğer fonksiyonları içerir. Bu **34 zorunlu fonksiyon**, **100** tam puan almak için gereklidir.
 
-#### Check and manipulate characters:
-| Function | Description |
+#### Karakterleri kontrol edin ve manipüle edin:
+| Fonksiyon | Açıklama |
 | :- | :- |
-| `ft_isalpha` | Alphabetic character test. |
-| `ft_isdigit` | Decimal-digit character test. |
-| `ft_isalnum` | Alphanumeric character test. |
-| `ft_isascii` | Test for ASCII character. |
-| `ft_toupper` | Lower case to upper case letter conversion. |
-| `ft_tolower` | Upper case to lower case letter conversion. |
+| `ft_isalpha` | Alfabetik karakter testi. |
+| `ft_isdigit` | Ondalık basamak karakter testi. |
+| `ft_isalnum` | Alfanümerik karakter testi. |
+| `ft_isascii` | ASCII karakter testi. |
+| `ft_toupper` | Küçük harfi büyük harfe dönüştürme. |
+| `ft_tolower` | Büyük harfi küçük harfe dönüştürme. |
 
-#### Manipulate strings:
-| Function | Description |
+#### String'leri manipüle edin:
+| Fonksiyon | Açıklama |
 | :- | :- |
-| `ft_strlen`   | Find the length of the string. |
-| `ft_strlcpy`  | Size-bounded string copying. |
-| `ft_strlcat`  | Size-bounded string concatenation. |
-| `ft_strchr`   | Locate the character in the string (first occurrence). |
-| `ft_strrchr`  | Locate the character in the string (last occurrence). |
-| `ft_strncmp`  | Compare strings (size-bounded). |
-| `ft_strnstr`  | Locate a substring in a string (size-bounded) |
-| `ft_substr`   | Extract substring from a string. |
-| `ft_strjoin`  | Concatenate two strings into a new string (with malloc). |
-| `ft_strtrim`  | Trim the beginning and end of the string with the specified characters. |
-| `ft_split`    | Split string, with specified character as delimiter, into an array of strings. |
-| `ft_strmapi`  | Create a new string by modifying the string with a specified function. |
-| `ft_striteri` | Iterates through a string, enabling character and index manipulation. |
+| `ft_strlen`   | String'in uzunluğunu bulun. |
+| `ft_strlcpy`  | Boyut sınırlı string kopyalama. |
+| `ft_strlcat`  | Boyut sınırlı string birleştirme. |
+| `ft_strchr`   | String'de karakteri bulun (ilk bulma). |
+| `ft_strrchr`  | String'de karakteri bulun (son bulma). |
+| `ft_strncmp`  | String'leri karşılaştırın (boyut sınırlı). |
+| `ft_strnstr`  | String'de alt string'i bulun (boyut sınırlı). |
+| `ft_substr`   | String'den alt string çıkarın. |
+| `ft_strjoin`  | İki string'i birleştirip yeni bir string oluşturun (malloc ile). |
+| `ft_strtrim`  | Belirtilen karakterlerle string'in başını ve sonunu kırpın. |
+| `ft_split`    | Belirtilen karakteri ayırıcı olarak kullanarak string'i bir diziye ayırın. |
+| `ft_strmapi`  | Belirtilen bir fonksiyonla string'i değiştirerek yeni bir string oluşturun. |
+| `ft_striteri` | String üzerinde gezinip, karakter ve indeks manipülasyonu yapın. |
 
-#### Manipulate memory:
-| Function | Description |
+#### Belleği manipüle edin:
+| Fonksiyon | Açıklama |
 | :- | :- |
-| `ft_calloc`  | Memory allocation. |
-| `ft_memset`  | Write a byte to a byte string. |
-| `ft_bzero`   | Write zeroes to a byte string. |
-| `ft_memcpy`  | Copy memory area. |
-| `ft_memmove` | Copy byte string. |
-| `ft_memchr`  | Locate byte in byte string. |
-| `ft_memcmp`  | Compare byte string. |
-| `ft_strdup`  | Save a copy of a string (with malloc). |
+| `ft_calloc`  | Bellek tahsisi yapın. |
+| `ft_memset`  | Bir byte'ı byte dizisine yazın. |
+| `ft_bzero`   | Byte dizisine sıfır yazın. |
+| `ft_memcpy`  | Bellek alanını kopyalayın. |
+| `ft_memmove` | Byte dizisini kopyalayın. |
+| `ft_memchr`  | Byte dizisinde byte'ı bulun. |
+| `ft_memcmp`  | Byte dizisini karşılaştırın. |
+| `ft_strdup`  | Bir string'in kopyasını saklayın (malloc ile). |
 
-#### Manipulate numbers:
-| Function | Description |
+#### Sayıları manipüle edin:
+| Fonksiyon | Açıklama |
 | :- | :- |
-| `ft_atoi` | Convert the ASCII string to an integer. |
-| `ft_itoa` | Convert integer to ASCII string. |
+| `ft_atoi` | ASCII string'i tam sayıya dönüştürün. |
+| `ft_itoa` | Tam sayıyı ASCII string'e dönüştürün. |
 
-#### Write to a file descriptor:
-| Function | Description |
+#### Bir dosya tanıtıcısına yazın:
+| Fonksiyon | Açıklama |
 | :- | :- |
-| `ft_putchar_fd` | Output a character to the given file. |
-| `ft_putstr_fd`  | Output string to the given file. |
-| `ft_putendl_fd` | Output string to given file with newline. |
-| `ft_putnbr_fd`  | Output integer to the given file. |
+| `ft_putchar_fd` | Verilen dosyaya bir karakter çıktılayın. |
+| `ft_putstr_fd`  | Verilen dosyaya string çıktılayın. |
+| `ft_putendl_fd` | Verilen dosyaya string'i yeni satırla çıktılayın. |
+| `ft_putnbr_fd`  | Verilen dosyaya tam sayı çıktılayın. |
 
 ## BONUS
-> The bonus functions in libft are focused on list manipulation and are worth an additional 25 towards the final grade. To achieve a **grade of 125**, **all 9 bonus functions and 34 mandatory functions** must be completed accurately.
+> Libft'teki bonus fonksiyonlar, liste manipülasyonuna odaklanır ve son notunuza 25 puan daha ekler. **125 tam puan** almak için **9 bonus fonksiyonun ve 34 zorunlu fonksiyonun** tamamı doğru şekilde tamamlanmalıdır.
 
-| Function | Description |
+| Fonksiyon | Açıklama |
 | :- | :- |
-| `ft_lstnew`       | Create new list. |
-| `ft_lstadd_front` | Add a new element at the beginning of the list. |
-| `ft_lstadd_back`  | Add a new element at the end of the list. |
-| `ft_lstsize`      | Count elements of a list. |
-| `ft_lstlast`      | Find the last element of the list. |
-| `ft_lstdelone`    | Delete element from the list. |
-| `ft_lstclear`     | Delete the sequence of elements of the list from a starting point. |
-| `ft_lstiter`      | Apply function to the content of all list elements. |
-| `ft_lstmap`       | Apply function to the content of all list elements into a new list. |
+| `ft_lstnew`       | Yeni bir liste oluşturun. |
+| `ft_lstadd_front` | Listenin başına yeni bir eleman ekleyin. |
+| `ft_lstadd_back`  | Listenin sonuna yeni bir eleman ekleyin. |
+| `ft_lstsize`      | Listedeki elemanları sayın. |
+| `ft_lstlast`      | Listenin son elemanını bulun. |
+| `ft_lstdelone`    | Listeden bir eleman silin. |
+| `ft_lstclear`     | Listeden belirtilen bir başlangıç noktasından itibaren elemanları silin. |
+| `ft_lstiter`      | Listenin tüm elemanlarının içeriğine bir fonksiyon uygulayın. |
+| `ft_lstmap`       | Listenin tüm elemanlarının içeriğine bir fonksiyon uygulayarak yeni bir liste oluşturun. |
 
 ## NORMINETTE
-> At 42 School, it is expected that almost every project is written following the Norm, which is the coding standard of the school.
+> 42 Okulu'nda, hemen hemen her projenin **Norm**'a göre yazılması beklenir. Bu, okulun belirlediği kodlama standartıdır.
 
 
-* [42 Norms](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf) - Information about 42 code norms. `PDF`
-* [Norminette](https://github.com/42School/norminette) - Tool to respect the code norm, made by 42. `GitHub`
-* [42 Header](https://github.com/42Paris/42header) - 42 header for Vim. `GitHub`
+* [42 Normları](https://github.com/42School/norminette/blob/master/pdf/en.norm.pdf) - 42'nin kodlama normları hakkında bilgi. `PDF`
+* [Norminette](https://github.com/42School/norminette) - 42 tarafından geliştirilen, kodlama normlarına uymak için kullanılan araç. `GitHub`
+* [42 Başlık](https://github.com/42Paris/42header) - Vim için 42 başlığı. `GitHub`
 
-## CONTRIBUTING
+## KATKIDA BULUNMA
 
-If you find any issues or have suggestions for improvements, feel free to fork the repository and open an issue or submit a pull request.
+Herhangi bir sorun bulursanız veya iyileştirme önerileriniz varsa, depoyu forkladıktan sonra bir sorun açabilir veya bir pull request gönderebilirsiniz.
 
-## LICENSE
+## LİSANS
 
-This project is available under the MIT License. For further details, please refer to the [LICENSE](LICENSE) file.
+Bu proje MIT Lisansı altında sunulmaktadır. Daha fazla bilgi için [LICENSE](LICENSE) dosyasına başvurun.
